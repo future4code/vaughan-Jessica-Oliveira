@@ -1,0 +1,5 @@
+# Aprendizados da primeira semana!
+A primeira semana na Labenu foi **intensa** pra dizer o mínimo!
+Demos nossos primeiros passos no mundo da programação com muito alto astral, apoio, nervoso e confusão mental! hahah A turma é muito legal e prestativa, e toda a equipe labenu muito atenciosa. A aula de Git definitivamente vai ficar na memória porque olha, que negócio **confuso**! Dava pra ver a fumacinha saindo da minha cabeça. 
+Dentre todas as dinâmicas, as aulas, as dúvidas, as conversas no slack, preciso confessar que chegar no fim dessa semana sabendo algo sobre git, terminal, tendo um perfil no github e começar a fazer os primeiros projetos é uma emoção imensa! Para quem sempre achou que programar era coisa de outro mundo, o primeiro commit é uma vitória enorme e a gente nunca mais esquece hahah
+Mesmo com toda as dificuldades dessa primeira semana, tudo isso só me deixou mais feliz porque, apesar de ver que serão 6 loooongos meses, serão meses em que vou crescer e aprender muito!! Estou muito feliz e ansiosa para tudo que vem por ai. **Vamos nessa!**
