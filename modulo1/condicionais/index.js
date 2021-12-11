@@ -65,7 +65,7 @@ switch (turnoDoEstudante) {
 //     console.log ("Bom Filme!")
 // } else {
 //     console.log("Escolha outro filme :(")
-//}
+// }
 
 //Desafios
 //1.
@@ -79,11 +79,4 @@ if (generoFilme === "fantasia" && valorDoIngresso < 15) {
 } else {
     console.log("Escolha outro filme :(")
 }
-
-//2.
-
-const nome = prompt("Qual o seu nome completo?")
-const tipoDeJogo = ("Que tipo de jogo deseja assistir? Digite IN para Internacional e DO para Doméstico").toLowerCase()
-const categoriaDeJogo = Number(prompt("Qual categoria de jogo deseja comprar? Digite 1, 2, 3 ou 4."))
-const quantidadeDeIngressos = Number(prompt("Quantos ingressos deseja comprar?"))
 
