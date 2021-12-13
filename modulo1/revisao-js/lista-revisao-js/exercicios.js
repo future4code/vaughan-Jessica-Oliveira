@@ -23,7 +23,11 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+    const numerosPares = array.filter(() => {
+        for (numero of array % 2 === 0) {
+            return numerosPares
+        }
+    })
 }
 
 // EXERCÍCIO 05
