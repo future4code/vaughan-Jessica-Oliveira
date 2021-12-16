@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;;
+}
+
+.background-paginas {
+    background-image: url(./img/diagon-alley.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: royalblue;
+}
+
+.icons-size {
+    width: 50px;
+    height: 50px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    padding: 25px;
+    margin: auto;
+    background-color: royalblue;
+}
+
+.menu {
+    background-color: slateblue;
+    height: 40px;
+    text-align: center;
+    justify-content:center;
+    padding-top: 15px;
+}
+
+.menu-style {
+    padding: 20px;
+}
+
+.main-information-home { 
+    background-color: royalblue;
+    background-image: url(./img/diagon-alley.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: royalblue;
+    height: 600px;
+    opacity: 0.7;
+}
+
+.main-information-pages { 
+    background-color: royalblue;
+    background-image: url(./img/night-sky.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: royalblue;
+    height: 650px;
+    list-style: none;
+}
+
+.main-information-text {
+    text-align: center;
+    justify-content: center;
+    color:white;
+    position: relative;
+    padding: 70px;
+    font-size: x-large;
+    list-style: none;
+}
+
+.footer {
+    background-color:royalblue;
+    color: white;
+    position: static;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.add-products-texts {
+    text-align: center;
+    justify-content: center;
+    color:white;
+    position: relative;
+    padding: 30px;
+    font-size: x-large;
+    list-style: none;
+}
+
+.add-product-button {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-information-inventory { 
+    background-color: royalblue;
+    background-image: url(./img/night-sky.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: royalblue;
+    height: 1000px;
+    list-style: none;
+}
