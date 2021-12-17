@@ -42,6 +42,7 @@ div>p:first-child {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    position:center;
 }
 
 .botao-amarelo:hover {
@@ -55,6 +56,7 @@ div>p:first-child {
 
 .icone {
     height: 15px;
+    width: 15px;
 }
 
 
@@ -112,11 +114,19 @@ td button {
     color: black;
 }
 
+td button:active {
+    background-color: white;
+    color: white;
+}
+
+td button:hover {
+    background-color: #dab926;
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
 }
-
 
 #back-button {
     background-color: white;
