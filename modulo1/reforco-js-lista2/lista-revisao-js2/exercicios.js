@@ -49,12 +49,42 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
+  let maiorNumero
+  let menorNumero
 
+  let objetoEntreDoisNumeros = {}
+  
+  if (num1 > num2) {
+    maiorNumero = num1;
+    menorNumero = num2;
+  } else {
+    maiorNumero = num2;
+    menorNumero = num1;
+  }
+  
+  let maiorDivisivelPorMenor = maiorNumero % menorNumero === 0;
+
+  let diferenca = (maiorNumero - menorNumero)
+
+  objetoEntreDoisNumeros = 
+  {maiorNumero:maiorNumero,
+    maiorDivisivelPorMenor:maiorDivisivelPorMenor,
+    diferenca:diferenca}
+
+    return objetoEntreDoisNumeros
 }
+
+
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+   const arrayNumerosPares = []
+   for(let i = 0; arrayNumerosPares.length < n; i++) {
+     if(i % 2 === 0) {
+       arrayNumerosPares.push(i)
+     }
+   }
+   return arrayNumerosPares
 }
 
 // EXERCÍCIO 09
@@ -116,7 +146,8 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+  const nomesOrdenadosAlfabeticamente = (a, b) => (a.nome > b.nome ? 1 : -1)
+  return consultas.sort(nomesOrdenadosAlfabeticamente)
 }
 
 // EXERCÍCIO 15B
