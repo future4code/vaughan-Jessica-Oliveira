@@ -8,8 +8,9 @@ import styled from "styled-components";
 
 const Button = styled.button`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 `;
 
 export default class App extends React.Component {
@@ -37,10 +38,10 @@ export default class App extends React.Component {
   };
   render() {
     return (
-      <div>
+      <>
         {this.renderizaEtapa()}
         <Button onClick={this.irParaProximaEtapa}>Próxima Etapa</Button>
-      </div>
+      </>
     );
   }
 }
