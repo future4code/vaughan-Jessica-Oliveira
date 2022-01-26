@@ -4,14 +4,9 @@ import React from "react";
 
 export default class Cadastro extends React.Component {
   state = {
-    inputName: "",
-    inputEmail: "",
-    list: [],
+    name: "",
+    email: "",
   };
-
-  componentDidMount() {
-    this.getAllUsers();
-  }
 
   handleName = (event) => {
     this.setState({ name: event.target.value });
@@ -25,66 +20,43 @@ export default class Cadastro extends React.Component {
     const urlCreateUsers =
       "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
     const axiosConfig = {
-      headers: { Authorization: "jessica-oliveira-vaughan" },
+      headers: { Authorization: "jessica-vaughan" },
     };
-    const body = { name: this.state.inputName, email: this.state.inputEmail };
-
+    const body = { name: this.state.name, email: this.state.email };
     axios
       .post(urlCreateUsers, body, axiosConfig)
       .then((response) => {
+        // console.log(response);
         alert("Usuário cadastrado com sucesso!");
-        this.setState({ name: "" });
-        this.setState({ email: "" });
-        this.getAllUsers();
+        // this.setState({ name: "" });
+        // this.setState({ email: "" });
+        // this.getAllUsers();
       })
       .catch((error) => {
+        console.log(error.response.data);
         // alert("Não foi possível cadastrar o usuário, tente novamente");
-        alert(error);
-        this.setState({ name: "" });
-        this.setState({ email: "" });
-      });
-  };
-
-  getAllUsers = () => {
-    const urlGetAllUsers =
-      "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-    const axiosConfig = {
-      headers: { Authorization: "jessica-oliveira-vaughan" },
-    };
-    axios
-      .get(urlGetAllUsers, axiosConfig)
-      .then((response) => {
-        this.setState({ userList: response.data });
-      })
-      .catch((error) => {
-        alert(error.response.data.message);
+        // alert(error);
+        // this.setState({ name: "" });
+        // this.setState({ email: "" });
       });
   };
 
   render() {
-    const userList = this.state.list.map((user) => {
-      return (
-        <div>
-          <p>{user.name}</p>
-        </div>
-      );
-    });
-    console.log("estado: ", this.state);
     return (
       <div>
-        <p>Cadastre seu usuário</p>
+        <h2>Cadastre-se aqui!</h2>
         <input
-          value={this.state.inputName}
+          placeholder="nome"
+          value={this.state.name}
           onChange={this.handleName}
-          placeholder="Nome"
         />
         <input
-          value={this.state.inputEmail}
+          placeholder="email"
+          value={this.state.email}
           onChange={this.handleEmail}
-          placeholder="Email"
         />
-        <button onClick={this.createUser}>Cadastrar usuário</button>
-        <button onClick={this.getAllUsers}>Lista de Usuários</button>
+        <button onClick={this.createUser}>Cadastrar</button>
+        <button onClick={this.props.usersListPage}>Lista de Usuários</button>
       </div>
     );
   }
