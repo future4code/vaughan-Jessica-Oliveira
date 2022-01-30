@@ -26,18 +26,14 @@ export default class Cadastro extends React.Component {
     axios
       .post(urlCreateUsers, body, axiosConfig)
       .then((response) => {
-        // console.log(response);
         alert("Usuário cadastrado com sucesso!");
-        // this.setState({ name: "" });
-        // this.setState({ email: "" });
-        // this.getAllUsers();
+        this.setState({ name: "" });
+        this.setState({ email: "" });
       })
       .catch((error) => {
-        console.log(error.response.data);
-        // alert("Não foi possível cadastrar o usuário, tente novamente");
-        // alert(error);
-        // this.setState({ name: "" });
-        // this.setState({ email: "" });
+        alert(error.response.data.message);
+        this.setState({ name: "" });
+        this.setState({ email: "" });
       });
   };
 
@@ -46,12 +42,12 @@ export default class Cadastro extends React.Component {
       <div>
         <h2>Cadastre-se aqui!</h2>
         <input
-          placeholder="nome"
+          placeholder={"nome"}
           value={this.state.name}
           onChange={this.handleName}
         />
         <input
-          placeholder="email"
+          placeholder={"email"}
           value={this.state.email}
           onChange={this.handleEmail}
         />
