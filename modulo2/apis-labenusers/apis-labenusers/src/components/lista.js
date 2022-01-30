@@ -19,38 +19,46 @@ export default class Lista extends React.Component {
     this.getAllUsers();
   }
 
-  getAllUsers = () => {
+  getAllUsers = async () => {
     const urlGetAllUsers =
       "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-    axios
-      .get(urlGetAllUsers, {
+    // axios
+    //   .get(urlGetAllUsers, {
+    //     headers: {
+    //       Authorization: "jessica-vaughan",
+    //     },
+    //   })
+    //   .then((response) => {
+    //     this.setState({ users: response.data });
+    //   })
+    //   .catch((error) => {
+    //     alert(error.response.data.message);
+    //   });
+    try {
+      const response = await axios.get(urlGetAllUsers, {
         headers: {
           Authorization: "jessica-vaughan",
         },
-      })
-      .then((response) => {
-        this.setState({ users: response.data });
-      })
-      .catch((error) => {
-        alert(error.response.data.message);
       });
+      this.setState({ users: response.data });
+    } catch (error) {
+      alert(error.response.data.message);
+    }
   };
 
-  deleteUser = (id) => {
+  deleteUser = async (id) => {
     const urlDeleteUser = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`;
-    axios
-      .delete(urlDeleteUser, {
+    try {
+      const response = await axios.delete(urlDeleteUser, {
         headers: {
           Authorization: "jessica-vaughan",
         },
-      })
-      .then((response) => {
-        alert("Usuário deletado com sucesso");
-        this.getAllUsers();
-      })
-      .catch((error) => {
-        alert(error.response.data.message);
       });
+      alert("Usuário deletado com sucesso");
+      this.getAllUsers();
+    } catch (error) {
+      alert(error.response.data.message);
+    }
   };
   render() {
     console.log(this.state.users);
