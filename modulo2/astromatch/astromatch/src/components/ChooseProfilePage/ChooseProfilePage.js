@@ -2,10 +2,10 @@ import react from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-export default function HomeScreen() {
+export default function ChooseProfilePage() {
   return (
     <>
-      <div>HomeScreen</div>
+      <div>Choose Profile Page</div>
     </>
   );
 }

@@ -1,15 +1,12 @@
 import react, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import HomeScreen from "./pages/HomeScreen";
-import MatchScreen from "./pages/MatchScreen";
+import Main from "./components/Main/Main";
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState("home");
   return (
     <>
-      {HomeScreen}
-      {MatchScreen}
+      <Main />
     </>
   );
 }

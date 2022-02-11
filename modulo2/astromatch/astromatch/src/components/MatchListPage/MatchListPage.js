@@ -2,10 +2,10 @@ import react from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-export default function MatchScreen() {
+export default function MatchListPage() {
   return (
     <>
-      <div>MatchScreen</div>
+      <div>Match List Page</div>
     </>
   );
 }
