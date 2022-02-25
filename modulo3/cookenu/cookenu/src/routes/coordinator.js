@@ -1,31 +1,19 @@
-import { Navigate } from "react-router-dom";
-
-export const goTologin = () => {
-  const history = useNavigate();
-
+export const goTologin = (history) => {
   return history("/login");
 };
 
-export const goToSignUp = () => {
-  const history = useNavigate();
-
+export const goToSignUp = (history) => {
   return history("/cadastro");
 };
 
-export const goToAddRecipes = () => {
-  const history = useNavigate();
-
+export const goToAddRecipes = (history) => {
   return history("/adicionar-receita");
 };
 
-export const goToRecipeDetail = (id) => {
-  const history = useNavigate();
-
+export const goToRecipeDetail = (history, id) => {
   return history(`/detalhe/${id}`);
 };
 
-export const goToRecipesList = () => {
-  const history = useNavigate();
-
+export const goToRecipesList = (history) => {
   return history("/");
 };
