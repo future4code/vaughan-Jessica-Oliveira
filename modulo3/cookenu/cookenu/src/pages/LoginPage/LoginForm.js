@@ -5,13 +5,13 @@ import useForm from "../../hooks/useForm";
 import { login } from "../../services/user";
 import { useNavigate } from "react-router-dom";
 
-export default function LoginForm() {
+const LoginForm = ({ setLoginButton }) => {
   const [form, onChange, clear] = useForm({ email: "", password: "" });
   const history = useNavigate();
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    login(form, clear, history);
+    login(form, clear, history, setLoginButton);
   };
 
   return (
@@ -52,4 +52,6 @@ export default function LoginForm() {
       </form>
     </InputsContainer>
   );
-}
+};
+
+export default LoginForm;

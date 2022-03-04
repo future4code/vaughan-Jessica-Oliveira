@@ -7,13 +7,13 @@ import { goToSignUp } from "../../routes/coordinator";
 import { useNavigate } from "react-router-dom";
 import useUnProtectedPage from "../../hooks/useUnprotectedPage";
 
-export default function LoginPage() {
+const LoginPage = ({ loginButton, setLoginButton }) => {
   useUnProtectedPage();
   const history = useNavigate();
   return (
     <ScreenContainer>
       <LogoImage src={logo} />
-      <LoginForm />
+      <LoginForm loginButton={loginButton} setLoginButton={setLoginButton} />
       <SignUpButtonContainer>
         <Button
           fullWidth
@@ -28,4 +28,6 @@ export default function LoginPage() {
       </SignUpButtonContainer>
     </ScreenContainer>
   );
-}
+};
+
+export default LoginPage;

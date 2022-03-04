@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { goTologin } from "../routes/coordinator";
 
-export default function useProtectedPage() {
+const useProtectedPage = () => {
   const history = useNavigate();
   useLayoutEffect(() => {
     const token = localStorage.getItem("token");
@@ -10,4 +10,5 @@ export default function useProtectedPage() {
       goTologin(history);
     }
   }, [history]);
-}
+};
+export default useProtectedPage;

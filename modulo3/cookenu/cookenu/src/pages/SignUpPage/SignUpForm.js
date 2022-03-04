@@ -6,7 +6,7 @@ import { Button } from "@material-ui/core";
 import { signUp } from "../../services/user";
 import { useNavigate } from "react-router-dom";
 
-export default function SignUpForm() {
+const SignUpForm = ({ setLoginButton }) => {
   const history = useNavigate();
   const [form, onChange, clear] = useForm({
     name: "",
@@ -17,7 +17,7 @@ export default function SignUpForm() {
   const onSubmitForm = (event) => {
     // console.log(form);
     event.preventDefault();
-    signUp(form, clear, history);
+    signUp(form, clear, history, setLoginButton);
   };
   return (
     <InputsContainer>
@@ -67,4 +67,6 @@ export default function SignUpForm() {
       </form>
     </InputsContainer>
   );
-}
+};
+
+export default SignUpForm;

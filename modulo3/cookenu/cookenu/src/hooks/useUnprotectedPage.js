@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { goToRecipesList } from "../routes/coordinator";
 
-export default function useUnProtectedPage() {
+const useUnProtectedPage = () => {
   const history = useNavigate();
   useLayoutEffect(() => {
     const token = localStorage.getItem("token");
@@ -10,4 +10,6 @@ export default function useUnProtectedPage() {
       goToRecipesList(history);
     }
   }, [history]);
-}
+};
+
+export default useUnProtectedPage;

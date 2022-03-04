@@ -2,7 +2,7 @@ import axios from "axios";
 import { BASE_URL } from "../constants/urls";
 import { goToRecipesList } from "../routes/coordinator";
 
-export const login = (form, clear, history) => {
+export const login = (form, clear, history, setLoginButton) => {
   axios
     .post(`${BASE_URL}/user/login`, form)
     .then((response) => {
@@ -10,22 +10,24 @@ export const login = (form, clear, history) => {
       localStorage.setItem("token", response.data.token);
       clear();
       goToRecipesList(history);
+      setLoginButton("Logout");
     })
     .catch((error) => {
       console.log(error);
-      alert("Erro no login, tente novamente.");
+      alert(error.response.data.message);
     });
 };
 
-export const signUp = (form, clear, history) => {
+export const signUp = (form, clear, history, setLoginButton) => {
   axios
     .post(`${BASE_URL}/user/signup`, form)
     .then((response) => {
       localStorage.setItem("token", response.data.token);
       clear();
       goToRecipesList(history);
+      setLoginButton("Logout");
     })
     .catch((error) => {
-      alert("Erro no cadastro, tente novamente");
+      alert(error.response.data.message);
     });
 };

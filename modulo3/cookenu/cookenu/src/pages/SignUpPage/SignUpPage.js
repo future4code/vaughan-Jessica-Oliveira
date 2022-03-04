@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import useUnProtectedPage from "../../hooks/useUnprotectedPage";
 
-export default function SignUpPage() {
+const SignUpPage = ({ setLoginButton }) => {
   useUnProtectedPage();
   const history = useNavigate();
   return (
     <ScreenContainer>
       <LogoImage src={logo} />
-      <SignUpForm />
+      <SignUpForm setLoginButton={setLoginButton} />
       <LoginButtonContainer>
         <Button
           fullWidth
@@ -28,4 +28,6 @@ export default function SignUpPage() {
       </LoginButtonContainer>
     </ScreenContainer>
   );
-}
+};
+
+export default SignUpPage;
