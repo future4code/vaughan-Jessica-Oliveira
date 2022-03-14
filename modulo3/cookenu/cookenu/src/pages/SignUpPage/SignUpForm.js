@@ -5,9 +5,12 @@ import useForm from "../../hooks/useForm";
 import { Button } from "@material-ui/core";
 import { signUp } from "../../services/user";
 import { useNavigate } from "react-router-dom";
+import { CircularProgress } from "@material-ui/core";
+import { useState } from "react";
 
 const SignUpForm = ({ setLoginButton }) => {
   const history = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [form, onChange, clear] = useForm({
     name: "",
     email: "",
@@ -17,7 +20,7 @@ const SignUpForm = ({ setLoginButton }) => {
   const onSubmitForm = (event) => {
     // console.log(form);
     event.preventDefault();
-    signUp(form, clear, history, setLoginButton);
+    signUp(form, clear, history, setLoginButton, setIsLoading);
   };
   return (
     <InputsContainer>
@@ -62,7 +65,11 @@ const SignUpForm = ({ setLoginButton }) => {
           margin={"normal"}
           type={"submit"}
         >
-          Cadastrar
+          {isLoading ? (
+            <CircularProgress color={"inherit"} size={24} />
+          ) : (
+            <>Fazer Cadastro</>
+          )}
         </Button>
       </form>
     </InputsContainer>
