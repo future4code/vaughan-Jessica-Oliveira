@@ -1,6 +1,6 @@
 //Exercício 1
 
-//a. pelo comando process.argv
+//a. podemos acessar pelo comando process.argv
 
 //b.
 const nome = process.argv[2];
