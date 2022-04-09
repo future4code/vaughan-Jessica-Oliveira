@@ -1,15 +1,15 @@
 {
-  "name": "aula-node",
+  "name": "exercicio3",
   "version": "1.0.0",
-  "description": "backend-aula-node",
+  "description": "aula-backend",
   "main": "index.js",
   "scripts": {
     "test": "echo testando",
-    "start": "node ./index.js"
+    "start": "node ./exercicio3.js"
   },
   "keywords": [
     "backend"
   ],
-  "author": "Jessica de Oliveira",
+  "author": "Jessica Oliveira",
   "license": "ISC"
 }
